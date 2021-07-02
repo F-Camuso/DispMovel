@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/fundo2"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pontos:"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtPalavra"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.317"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+        app:layout_constraintVertical_bias="0.464" />
+
+    <Button
+        android:id="@+id/btnReset"
+        android:backgroundTint="@color/fundo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="28dp"
+        android:onClick="reseta"
+        android:text="@string/resetar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtTentativas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        android:text=" X X X X X"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/btnReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtLetrasTentadas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="100dp"
+        android:text="Letras tentadas: "
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtTentativas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txtPalavra"
+        android:layout_width="171dp"
+        android:layout_height="43dp"
+        android:gravity="center"
+        android:text="Palavra"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtLetrasTentadas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.508" />
+
+    <EditText
+        android:id="@+id/editAddLetra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Digite uma letra..."
+        android:inputType="textPersonName"
+        android:maxLength="1"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtLetrasTentadas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPalavra" />
+
+    <TextView
+        android:id="@+id/textTitulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/jogo"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/txtPalavra"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.186"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.324" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="135dp"
+        android:layout_height="139dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.687"
+        app:layout_constraintStart_toEndOf="@+id/textTitulo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/pngitem_846424" />
+
+    <TextView
+        android:id="@+id/pontuacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/fundo"
+        app:layout_constraintBottom_toTopOf="@+id/txtPalavra"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.169"
+        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+        app:layout_constraintVertical_bias="0.464" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
